@@ -1,13 +1,13 @@
 def encodeBase64(str):
     def to64(binStr):
         intVal = int(binStr, 2)
-        if intVal <= 25:
+        if (intVal <= 25):
             return chr(intVal + 65)
-        elif intVal <= 51:
+        elif (intVal <= 51):
             return chr(intVal + 71)
-        elif intVal <= 61:
+        elif (intVal <= 61):
             return chr(intVal - 4)
-        elif intVal == 62:
+        elif (intVal == 62):
             return "+"
         else:
             return "/"
