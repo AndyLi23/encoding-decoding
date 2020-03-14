@@ -9,15 +9,16 @@ def encodeVigenere(s, keyword):
             ans += chr(ord(s[strInd]) + ord(keyword[keywordInd]) - 91)
         else:
             ans += chr(ord(s[strInd]) - 65 + ord(keyword[keywordInd]))
-        strInd+=1
+        strInd += 1
         if keywordInd == len(keyword) - 1:
             keywordInd = 0
         else:
-            keywordInd+=1
+            keywordInd += 1
     return ans
 
 
 def decodeVigenere(s, keyword):
+    s = "".join([i for i in s.upper() if i.isalpha()])
     keyword = "".join([i for i in keyword.upper() if i.isalpha()])
     ans = ""
     strInd = 0
@@ -34,5 +35,3 @@ def decodeVigenere(s, keyword):
             keywordInd += 1
 
     return ans
-
-

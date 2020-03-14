@@ -1,2 +1,2 @@
 # encoding-decoding
-python encode and decode
+tkinter app for encoding and decoding
